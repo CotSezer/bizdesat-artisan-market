@@ -5,6 +5,9 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import ImageCarousel from "@/components/ImageCarousel";
 import SponsorsSection from "@/components/SponsorsSection";
+import AppMockupsSection from "@/components/AppMockupsSection";
+import MobileStickySignup from "@/components/MobileStickySignup";
+import AnimatedInput from "@/components/AnimatedInput";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -30,6 +33,8 @@ const Index = () => {
             alt="Bizdesat Logo" 
             className="h-8 md:h-10"
           />
+          {/* Separator line */}
+          <div className="w-full h-px bg-[#E0E0E0] mt-6"></div>
         </div>
       </header>
 
@@ -37,49 +42,49 @@ const Index = () => {
       <section className="max-w-7xl mx-auto px-4 md:px-8 pt-12 md:pt-20 pb-16">
         <div className="text-center space-y-8">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight animate-fade-in">
             Elindeki fazlalık,<br />
             <span className="text-[#0046C6]">bir başkasının ihtiyacı</span> olabilir.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-gray-600 font-medium">
+          <p className="text-xl md:text-2xl text-gray-600 font-medium animate-fade-in animation-delay-200">
             Yakında başlıyoruz – ilk siz öğrenin.
           </p>
 
           {/* Value Propositions */}
-          <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 mt-12">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 mt-12 animate-fade-in animation-delay-400">
+            <div className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
               <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
               <span className="text-lg font-medium text-gray-700">Hızlı listeleme</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
               <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
               <span className="text-lg font-medium text-gray-700">Güvenli satış</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
               <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
               <span className="text-lg font-medium text-gray-700">Depoyu rahatlat</span>
             </div>
           </div>
 
           {/* Email Signup Form */}
-          <div className="max-w-md mx-auto mt-12">
+          <div className="max-w-md mx-auto mt-12 animate-fade-in animation-delay-600">
             <p className="text-lg font-medium text-gray-800 mb-4">
               Haber bültenimize katıl, erken erişimden faydalan.
             </p>
             <form onSubmit={handleEmailSubmit} className="flex gap-3">
-              <Input
+              <AnimatedInput
                 type="email"
                 placeholder="E-posta adresiniz"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-12 text-base border-2 border-gray-200 focus:border-[#0046C6] rounded-lg"
+                className="flex-1"
                 required
               />
               <Button 
                 type="submit"
-                className="h-12 px-6 bg-[#0046C6] hover:bg-[#003a9e] text-white font-medium rounded-lg transition-colors"
+                className="h-12 px-6 bg-[#0046C6] hover:bg-[#003a9e] hover:scale-105 text-white font-medium rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Katıl
               </Button>
@@ -89,9 +94,12 @@ const Index = () => {
       </section>
 
       {/* Image Carousel */}
-      <section className="w-full py-16">
+      <section className="w-full py-16 animate-fade-in animation-delay-800">
         <ImageCarousel />
       </section>
+
+      {/* App Mockups Section */}
+      <AppMockupsSection />
 
       {/* Sponsors Section */}
       <SponsorsSection />
@@ -103,6 +111,9 @@ const Index = () => {
           <p className="text-[#0046C6] font-medium text-lg">Elinde kaldı, Bizdesat!</p>
         </div>
       </footer>
+
+      {/* Mobile Sticky CTA */}
+      <MobileStickySignup />
     </div>
   );
 };
