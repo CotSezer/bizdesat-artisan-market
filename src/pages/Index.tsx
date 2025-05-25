@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -73,7 +74,7 @@ const Index = () => {
             <p className="text-lg font-medium text-gray-800 mb-6">
               Haber bültenimize katıl, erken erişimden faydalan.
             </p>
-            <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4">
+            <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 items-center">
               <AnimatedInput
                 type="email"
                 placeholder="E-posta adresiniz"
@@ -119,3 +120,4 @@ const Index = () => {
 };
 
 export default Index;
+
