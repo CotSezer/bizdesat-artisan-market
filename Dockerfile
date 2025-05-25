@@ -1,33 +1,28 @@
-
-# Use Node.js 18 alpine as base image
+# 1. Build aşaması
 FROM node:18-alpine as build
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files
+# Bağımlılıkları yükle (devDependencies dahil)
 COPY package*.json ./
+RUN npm ci
 
-# Install dependencies
-RUN npm ci --only=production
-
-# Copy source code
+# Kaynak kodu kopyala
 COPY . .
 
-# Build the application
-RUN npm run build
+# Vite ile üretim için build al
+RUN NODE_ENV=production npm run build
 
-# Production stage
+# 2. Production aşaması (sadece statik dosyalar + nginx)
 FROM nginx:alpine
 
-# Copy built assets from build stage
+# Build sonucu oluşan dist dizinini nginx'e kopyala
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copy custom nginx configuration
+# Özel nginx konfigürasyonunu kopyala
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 80
 EXPOSE 80
 
-# Start nginx
+# Nginx'i foreground modda başlat
 CMD ["nginx", "-g", "daemon off;"]
