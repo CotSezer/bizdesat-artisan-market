@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -68,24 +69,24 @@ const Index = () => {
           </div>
 
           {/* Email Signup Form */}
-          <div className="max-w-md mx-auto mt-12 animate-fade-in animation-delay-600">
-            <p className="text-lg font-medium text-gray-800 mb-4">
+          <div className="max-w-lg mx-auto mt-12 animate-fade-in animation-delay-600">
+            <p className="text-lg font-medium text-gray-800 mb-6">
               Haber bültenimize katıl, erken erişimden faydalan.
             </p>
-            <form onSubmit={handleEmailSubmit} className="flex gap-3">
+            <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4">
               <AnimatedInput
                 type="email"
                 placeholder="E-posta adresiniz"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1"
+                className="flex-1 h-14 text-base"
                 required
               />
               <Button 
                 type="submit"
-                className="h-12 px-6 bg-[#0046C6] hover:bg-[#003a9e] hover:scale-105 text-white font-medium rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="h-14 px-8 bg-[#0046C6] hover:bg-[#003a9e] hover:scale-105 text-white font-medium rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-base sm:min-w-[160px]"
               >
-                Katıl
+                Bizdesat'a Katıl
               </Button>
             </form>
           </div>

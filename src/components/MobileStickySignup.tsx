@@ -42,14 +42,14 @@ const MobileStickySignup = () => {
           placeholder="E-posta"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 h-10 text-sm"
+          className="flex-1 h-11 text-sm"
           required
         />
         <Button 
           type="submit"
-          className="h-10 px-4 bg-[#0046C6] hover:bg-[#003a9e] text-white text-sm font-medium"
+          className="h-11 px-4 bg-[#0046C6] hover:bg-[#003a9e] text-white text-sm font-medium"
         >
-          Katıl
+          Bizdesat'a Katıl
         </Button>
       </form>
     </div>
