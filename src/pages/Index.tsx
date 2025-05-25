@@ -119,7 +119,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="w-full py-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <p className="text-gray-600 mb-2">© 2024 Bizdesat. Tüm hakları saklıdır.</p>
+          <p className="text-gray-600 mb-2">© 2025 Bizdesat. Tüm hakları saklıdır.</p>
           <p className="text-[#0046C6] font-medium text-lg">Elinde kaldı, Bizdesat!</p>
         </div>
       </footer>
