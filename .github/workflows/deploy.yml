@@ -23,7 +23,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_API_URL: https://e-commerce-api-service-728855696411.europe-west1.run.app
+          VITE_API_URL: https://bizdesat-532774570113.europe-west1.run.app
 
       - name: Upload to Cloudflare Pages
         uses: cloudflare/pages-action@v1

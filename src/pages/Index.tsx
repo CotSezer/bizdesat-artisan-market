@@ -7,18 +7,31 @@ import SponsorsSection from "@/components/SponsorsSection";
 import AppMockupsSection from "@/components/AppMockupsSection";
 import MobileStickySignup from "@/components/MobileStickySignup";
 import AnimatedInput from "@/components/AnimatedInput";
+import { subscribeWithEmail } from "@/services/api";
 
 const Index = () => {
   const [email, setEmail] = useState("");
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+
+    try {
+      if (!email) return;
+
+      await subscribeWithEmail(email);
+
       toast({
         title: "Teşekkürler!",
         description: "E-posta adresiniz başarıyla kaydedildi. Erken erişim için size haber vereceğiz.",
       });
+
       setEmail("");
+    } catch (error: any) {
+      toast({
+        title: "Hata!",
+        description: error.message || "E-posta kaydedilirken bir sorun oluştu.",
+        variant: "destructive",
+      });
     }
   };
 
