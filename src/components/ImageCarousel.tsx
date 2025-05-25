@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 const ImageCarousel = () => {
@@ -37,7 +36,7 @@ const ImageCarousel = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8">
-      <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-r from-[#FFD700] to-[#f0c800]">
+      <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-r from-[#FDC41E] to-[#e6b01a]">
         {slides.map((slide, index) => (
           <div
             key={index}

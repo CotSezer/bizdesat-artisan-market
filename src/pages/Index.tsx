@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -44,7 +43,7 @@ const Index = () => {
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight animate-fade-in">
             Elindeki fazlalık,<br />
-            <span className="text-[#FFD700]">bir başkasının ihtiyacı</span> olabilir.
+            <span className="text-[#FDC41E]">bir başkasının ihtiyacı</span> olabilir.
           </h1>
 
           {/* Subheadline */}
@@ -55,15 +54,15 @@ const Index = () => {
           {/* Value Propositions */}
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 mt-12 animate-fade-in animation-delay-400">
             <div className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
-              <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
+              <div className="w-3 h-3 bg-[#FDC41E] rounded-full"></div>
               <span className="text-lg font-medium text-gray-700">Hızlı listeleme</span>
             </div>
             <div className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
-              <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
+              <div className="w-3 h-3 bg-[#FDC41E] rounded-full"></div>
               <span className="text-lg font-medium text-gray-700">Güvenli satış</span>
             </div>
             <div className="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
-              <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
+              <div className="w-3 h-3 bg-[#FDC41E] rounded-full"></div>
               <span className="text-lg font-medium text-gray-700">Depoyu rahatlat</span>
             </div>
           </div>
