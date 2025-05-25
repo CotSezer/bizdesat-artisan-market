@@ -44,7 +44,7 @@ const Index = () => {
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight animate-fade-in">
             Elindeki fazlalık,<br />
-            <span className="text-[#0046C6]">bir başkasının ihtiyacı</span> olabilir.
+            <span className="text-[#FFD700]">bir başkasının ihtiyacı</span> olabilir.
           </h1>
 
           {/* Subheadline */}
