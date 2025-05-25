@@ -68,7 +68,7 @@ const Index = () => {
           </div>
 
           {/* Email Signup Form */}
-          <div className="max-w-lg mx-auto mt-12 animate-fade-in animation-delay-600">
+          <div className="max-w-xl mx-auto mt-12 animate-fade-in animation-delay-600">
             <p className="text-lg font-medium text-gray-800 mb-6">
               Haber bültenimize katıl, erken erişimden faydalan.
             </p>
@@ -78,12 +78,12 @@ const Index = () => {
                 placeholder="E-posta adresiniz"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full h-14 text-base"
+                className="w-full h-14 text-base rounded-xl"
                 required
               />
               <Button 
                 type="submit"
-                className="w-full h-14 px-8 bg-[#0046C6] hover:bg-[#003a9e] hover:scale-105 text-white font-medium rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-base"
+                className="w-full h-14 px-8 bg-[#0046C6] hover:bg-[#003a9e] hover:scale-105 text-white font-medium rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl text-base"
               >
                 Bizdesat'a Katıl
               </Button>
