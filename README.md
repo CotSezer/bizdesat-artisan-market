@@ -1,3 +1,4 @@
+
 # Welcome to your Lovable project
 
 ## Project info
@@ -49,6 +50,71 @@ npm run dev
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## Docker Deployment
+
+This project includes Docker configuration for easy deployment and containerization.
+
+### Prerequisites
+
+- [Docker](https://www.docker.com/get-started) installed on your machine
+- [Docker Compose](https://docs.docker.com/compose/install/) (usually included with Docker Desktop)
+
+### Build and Run with Docker Compose (Recommended)
+
+```bash
+# Build and start the application
+docker-compose up --build
+
+# Run in detached mode (background)
+docker-compose up --build -d
+
+# Stop the application
+docker-compose down
+
+# View logs
+docker-compose logs -f bizdesat-app
+```
+
+### Alternative: Using Docker directly
+
+```bash
+# Build the Docker image
+docker build -t bizdesat-app .
+
+# Run the container
+docker run -p 3000:80 bizdesat-app
+
+# Run in detached mode
+docker run -d -p 3000:80 --name bizdesat-container bizdesat-app
+
+# Stop the container
+docker stop bizdesat-container
+
+# Remove the container
+docker rm bizdesat-container
+```
+
+### Useful Docker Commands
+
+```bash
+# Check running containers
+docker ps
+
+# View application logs
+docker logs bizdesat-container
+
+# Access container shell (if needed for debugging)
+docker exec -it bizdesat-container sh
+
+# Remove unused Docker resources
+docker system prune
+
+# Rebuild without cache
+docker-compose build --no-cache
+```
+
+After running `docker-compose up --build`, your application will be available at `http://localhost:3000`.
 
 ## What technologies are used for this project?
 
