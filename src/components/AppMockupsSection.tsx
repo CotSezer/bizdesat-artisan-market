@@ -40,18 +40,6 @@ const AppMockupsSection = () => {
               {/* Mockup placeholder */}
               <div className="w-full h-64 bg-gradient-to-br from-[#0046C6]/10 to-[#FFD700]/20 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden">
                 {mockup.type === "homepage" ? (
-                  <img
-                    src="/lovable-uploads/0a71f0d2-5a59-4e8f-86a5-f5ddd893fab7.png"
-                    alt="Ana Sayfa Görünümü"
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                ) : mockup.type === "listing" ? (
-                  <img
-                    src="/lovable-uploads/f495a527-e96f-4ff5-afdf-61d9ef314ba7.png"
-                    alt="Ürün Listesi Görünümü"
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                ) : (
                   <>
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0046C6] to-[#003a9e] opacity-5"></div>
                     <div className="text-center z-10">
@@ -61,7 +49,7 @@ const AppMockupsSection = () => {
                         </span>
                       </div>
                       <p className="text-sm text-gray-500 font-medium">
-                        Kategori Görünümü
+                        Ana Sayfa Görünümü
                       </p>
                     </div>
                     
@@ -79,6 +67,18 @@ const AppMockupsSection = () => {
                       </div>
                     </div>
                   </>
+                ) : mockup.type === "listing" ? (
+                  <img
+                    src="/lovable-uploads/f495a527-e96f-4ff5-afdf-61d9ef314ba7.png"
+                    alt="Ürün Listesi Görünümü"
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                ) : (
+                  <img
+                    src="/lovable-uploads/0a71f0d2-5a59-4e8f-86a5-f5ddd893fab7.png"
+                    alt="Kategori Görünümü"
+                    className="w-full h-full object-cover rounded-xl"
+                  />
                 )}
               </div>
               
