@@ -1,9 +1,9 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import ImageCarousel from "@/components/ImageCarousel";
-import SponsorsSection from "@/components/SponsorsSection";
 import AppMockupsSection from "@/components/AppMockupsSection";
 import MobileStickySignup from "@/components/MobileStickySignup";
 import AnimatedInput from "@/components/AnimatedInput";
@@ -113,8 +113,16 @@ const Index = () => {
       {/* App Mockups Section */}
       <AppMockupsSection />
 
-      {/* Sponsors Section */}
-      <SponsorsSection />
+      {/* New Homepage Visual Section */}
+      <section className="w-full">
+        <div className="w-full h-auto">
+          <img 
+            src="/lovable-uploads/0a71f0d2-5a59-4e8f-86a5-f5ddd893fab7.png" 
+            alt="Bizdesat Categories" 
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="w-full py-12 border-t border-gray-100">
