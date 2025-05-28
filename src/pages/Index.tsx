@@ -113,17 +113,6 @@ const Index = () => {
       {/* App Mockups Section */}
       <AppMockupsSection />
 
-      {/* New Homepage Visual Section */}
-      <section className="w-full">
-        <div className="w-full h-auto">
-          <img 
-            src="/lovable-uploads/0a71f0d2-5a59-4e8f-86a5-f5ddd893fab7.png" 
-            alt="Bizdesat Categories" 
-            className="w-full h-auto object-cover"
-          />
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="w-full py-12 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
