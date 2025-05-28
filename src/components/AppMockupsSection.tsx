@@ -32,14 +32,8 @@ const AppMockupsSection = () => {
                 {mockup.type === "homepage" ? <>
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0046C6] to-[#003a9e] opacity-5"></div>
                     <div className="text-center z-10">
-                      <div className="w-16 h-16 bg-[#0046C6] rounded-lg flex items-center justify-center mx-auto mb-3">
-                        <span className="text-white font-bold text-2xl">
-                          {mockup.title.charAt(0)}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-500 font-medium">
-                        Ana Sayfa Görünümü
-                      </p>
+                      
+                      
                     </div>
                     
                     {/* Simulated interface elements */}
