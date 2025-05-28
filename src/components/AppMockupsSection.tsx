@@ -45,6 +45,12 @@ const AppMockupsSection = () => {
                     alt="Ana Sayfa Görünümü"
                     className="w-full h-full object-cover rounded-xl"
                   />
+                ) : mockup.type === "listing" ? (
+                  <img
+                    src="/lovable-uploads/f495a527-e96f-4ff5-afdf-61d9ef314ba7.png"
+                    alt="Ürün Listesi Görünümü"
+                    className="w-full h-full object-cover rounded-xl"
+                  />
                 ) : (
                   <>
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0046C6] to-[#003a9e] opacity-5"></div>
@@ -55,8 +61,7 @@ const AppMockupsSection = () => {
                         </span>
                       </div>
                       <p className="text-sm text-gray-500 font-medium">
-                        {mockup.type === "listing" && "Liste Görünümü"}
-                        {mockup.type === "categories" && "Kategori Görünümü"}
+                        Kategori Görünümü
                       </p>
                     </div>
                     
