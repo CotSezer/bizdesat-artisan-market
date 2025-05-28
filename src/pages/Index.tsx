@@ -7,6 +7,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 import AppMockupsSection from "@/components/AppMockupsSection";
 import MobileStickySignup from "@/components/MobileStickySignup";
 import AnimatedInput from "@/components/AnimatedInput";
+import BannerSection from "@/components/BannerSection";
 import { subscribeWithEmail } from "@/services/api";
 
 const Index = () => {
@@ -104,6 +105,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Banner Section */}
+      <BannerSection />
 
       {/* Image Carousel */}
       <section className="w-full py-16 animate-fade-in animation-delay-800">
